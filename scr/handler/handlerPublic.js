@@ -5,8 +5,9 @@ const corentType = {
   '.js': 'text/javascript',
   '.css': 'text/css',
   '.html': 'text/html',
-  '.jpg': 'image/jpg',
-  '.png': 'image/png',
+  '.json': 'application/json',
+  // '.jpg': 'image/jpg',
+  // '.png': 'image/png',
 };
 const publicHandler = (url, response) => {
   const filePath = path.join(__dirname, '..', '..', url);
