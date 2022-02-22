@@ -6,13 +6,13 @@ const corentType = {
   '.css': 'text/css',
   '.html': 'text/html',
   '.json': 'application/json',
-  // '.jpg': 'image/jpg',
-  // '.png': 'image/png',
+  '.jpg': 'image/jpg',
+  '.png': 'image/png',
 };
 const publicHandler = (url, response) => {
   const filePath = path.join(__dirname, '..', '..', url);
   const extention = path.extname(url);
-
+  console.log(filePath);
   fs.readFile(filePath, (err, file) => {
     if (err) {
       response.writeHead(500);
