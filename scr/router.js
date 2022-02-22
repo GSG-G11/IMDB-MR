@@ -13,7 +13,7 @@ const router = (request, response) => {
     publicHandler('/public/main.css', response);
   } else if (endpoint === '/dom.js') {
     publicHandler('/public/dom.js', response);
-  } else if (endpoint === '/api.js') {
+  } else if (endpoint === '/API/api.js') {
     publicHandler('/API/api.js', response);
   } else if (endpoint === '/scr/dis') {
     publicHandler('/scr/dis.json', response);
