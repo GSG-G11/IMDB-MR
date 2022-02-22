@@ -1,22 +1,22 @@
-// const fs = require('fs');
-// const path = require('path');
-// const querystring = require('querystring');
 const publicHandler = require('./handler/handlerPublic');
-// const searchHandler = require('./handler/handlerSearch');
 
 const router = (request, response) => {
   const endpoint = request.url;
-  // const method = request.method;
+
   if (endpoint === '/') {
     publicHandler('/public/index.html', response);
   } else if (endpoint === '/main.css') {
-    publicHandler('/public/main.css', response);
+    publicHandler(endpoint, response);
   } else if (endpoint === '/dom.js') {
-    publicHandler('/public/dom.js', response);
+    publicHandler(endpoint, response);
   } else if (endpoint === '/scr/dis') {
-    publicHandler('/scr/dis.json', response);
+    publicHandler(endpoint, response);
   } else if (endpoint === '/search') {
     // searchHandler('/scr/dis.json', response);
+  } else if (endpoint === '/public/dom.js') {
+    publicHandler(endpoint, response);
+  } else if (endpoint === '/scr/api.js') {
+    publicHandler(endpoint, response);
   } else {
     response.writeHead(404);
     response.end('Page not found');
