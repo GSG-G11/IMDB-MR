@@ -1,3 +1,4 @@
+console.log('lllllllll');
 const req = (method, url, cb) => {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {

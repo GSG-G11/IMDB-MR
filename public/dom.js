@@ -25,6 +25,7 @@ const creatElement = (data) => {
 
 // eslint-disable-next-line
 const displayContent = (data) => {
+  console.log('hiiii');
   const moviesList = data.items;
   moviesList.forEach((element) => {
     creatElement(element);
