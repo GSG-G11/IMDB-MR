@@ -4,7 +4,7 @@ body{
 }
 .background {
     width: 100%;
-    position: absolute;
+    position: fixed;
     height: 110vh;
     z-index: -1;
     filter: brightness(0.75) contrast(1.2);
