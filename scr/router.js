@@ -9,9 +9,6 @@ const router = (request, response) => {
     publicHandler('/public/index.html', response);
   } else if (endpoint === '/public/main.css') {
     publicHandler(endpoint, response);
-  } else if (endpoint === '/dom.js') {
-    publicHandler(endpoint, response);
-    // publicHandler('/public/dom.js', response);
   } else if (endpoint === '/public/dom.js') {
     publicHandler(endpoint, response);
   } else if (endpoint === '/public/background.jpg') {

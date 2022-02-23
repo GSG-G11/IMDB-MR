@@ -4,6 +4,9 @@ const dataList = document.querySelector('#film');
 const btn = document.querySelector('button');
 
 const displayContent = (data) => {
+  while (containar.firstChild) {
+    containar.removeChild(containar.lastChild);
+  }
   const img = document.createElement('img');
   img.src = data.results[0].image;
   containar.appendChild(img);
@@ -30,7 +33,7 @@ search.addEventListener('input', () => {
         optionView(e);
       });
     },
-    search.value,
+    search.value
   );
 });
 
@@ -41,6 +44,6 @@ btn.addEventListener('click', () => {
     (data) => {
       displayContent(JSON.parse(data));
     },
-    search.value,
+    search.value
   );
 });
