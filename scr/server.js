@@ -1,9 +1,9 @@
 const http = require('http');
 const router = require('./router');
-require('env2')('.env');
-const api = process.env.API_KEY;
+// require('env2')('.env');
+// const api = process.env.API_KEY;
 const host = process.env.HOST || 'localhost';
-const port = process.env.PORT || 4400;
+const port = process.env.PORT || 4000;
 
 const server = http.createServer(router);
 
