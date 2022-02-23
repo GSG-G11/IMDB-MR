@@ -1,5 +1,8 @@
 // eslint-disable-next-line
 const containar = document.querySelector('.card');
+const search = document.querySelector('input');
+const dataList = document.querySelector('#film');
+const btn = document.querySelector('button');
 
 const creatElement = (data) => {
   // eslint-disable-next-line
@@ -22,14 +25,34 @@ const creatElement = (data) => {
   containar.appendChild(discrption);
   discrption.textContent = data.crew;
 };
-
 // eslint-disable-next-line
 const displayContent = (data) => {
-  console.log('hiiii');
   const moviesList = data.items;
   moviesList.forEach((element) => {
     creatElement(element);
   });
-  // console.log(data.items[0]);
-  // creatElement(data.items[0]);
 };
+
+const optionView = (data) => {
+  const opt = document.createElement('option');
+  opt.textContent = data;
+  dataList.appendChild(opt);
+};
+const filterArr = (data, val) => {
+  let arr = [];
+  arr = data.filter((ele) => {
+    return ele.name.toLowerCase().includes(val.toLowerCase());
+  });
+  arr.map((e) => {
+    optionView(e.name);
+  });
+  return arr;
+};
+search.addEventListener('input', () => {
+  document.querySelectorAll('option').forEach((e) => {
+    e.remove();
+  });
+  get('/search', (data) => {
+    filterArr(data, search.value);
+  });
+});
