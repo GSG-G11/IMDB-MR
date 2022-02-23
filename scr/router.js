@@ -1,6 +1,7 @@
 const publicHandler = require('./handler/handlerPublic');
 const handlerAPI = require('./handler/handlerAPI.js');
 const dis = require('./dis.json');
+
 const router = (request, response) => {
   const endpoint = request.url;
   const method = request.method;
@@ -14,7 +15,6 @@ const router = (request, response) => {
   } else if (endpoint === '/public/dom.js') {
     publicHandler(endpoint, response);
   } else if (endpoint === '/public/background.jpg') {
-    console.log(endpoint);
     publicHandler(endpoint, response);
   } else if (endpoint === '/search' && method === 'POST') {
     const obj = JSON.parse(JSON.stringify(Object.values(dis)));
