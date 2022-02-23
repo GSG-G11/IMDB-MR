@@ -10,8 +10,11 @@ const router = (request, response) => {
     publicHandler(endpoint, response);
   } else if (endpoint === '/dom.js') {
     publicHandler(endpoint, response);
-    publicHandler('/public/dom.js', response);
+    // publicHandler('/public/dom.js', response);
   } else if (endpoint === '/public/dom.js') {
+    publicHandler(endpoint, response);
+  } else if (endpoint === '/public/background.jpg') {
+    console.log(endpoint);
     publicHandler(endpoint, response);
   } else if (endpoint === '/search' && method === 'POST') {
     const obj = JSON.parse(JSON.stringify(Object.values(dis)));
