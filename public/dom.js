@@ -3,24 +3,6 @@ const search = document.querySelector('input');
 const dataList = document.querySelector('#film');
 const btn = document.querySelector('button');
 
-const creatElement = (data) => {
-  const img = document.createElement('img');
-  img.src = data.image;
-  containar.appendChild(img);
-
-  const titleInside = document.createElement('h2');
-  titleInside.textContent = data.fullTitle;
-  containar.appendChild(titleInside);
-
-  const rate = document.createElement('h2');
-  rate.textContent = data.rank;
-  containar.appendChild(rate);
-
-  const discrption = document.createElement('p');
-  containar.appendChild(discrption);
-  discrption.textContent = data.crew;
-};
-
 const displayContent = (data) => {
   const img = document.createElement('img');
   img.src = data.results[0].image;
@@ -48,7 +30,7 @@ search.addEventListener('input', () => {
         optionView(e);
       });
     },
-    search.value
+    search.value,
   );
 });
 
@@ -59,6 +41,6 @@ btn.addEventListener('click', () => {
     (data) => {
       displayContent(JSON.parse(data));
     },
-    search.value
+    search.value,
   );
 });
