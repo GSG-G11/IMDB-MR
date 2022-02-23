@@ -12,7 +12,6 @@ const corentType = {
 const publicHandler = (url, response) => {
   const filePath = path.join(__dirname, '..', '..', url);
   const extention = path.extname(url);
-  // console.log(extention);
   fs.readFile(filePath, (err, file) => {
     if (err) {
       response.writeHead(500);
