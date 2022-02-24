@@ -1,6 +1,5 @@
 function req(method, url, cb, payload) {
   const xhr = new XMLHttpRequest();
-  const payloadString = JSON.stringify(payload);
 
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {

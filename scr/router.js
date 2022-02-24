@@ -11,7 +11,7 @@ const router = (request, response) => {
     publicHandler(endpoint, response);
   } else if (endpoint === '/public/dom.js') {
     publicHandler(endpoint, response);
-  } else if (endpoint === '/public/background.jpg') {
+  } else if (endpoint === '/public/IMDB-MR_free-file.png') {
     publicHandler(endpoint, response);
   } else if (endpoint === '/search' && method === 'POST') {
     const obj = JSON.parse(JSON.stringify(Object.values(dis)));
@@ -34,7 +34,7 @@ const router = (request, response) => {
     request.on('end', () => {
       handlerAPI(response, data);
     });
-  } else if (endpoint === '/scr/api.js') {
+  } else if (endpoint === '/public/api.js') {
     publicHandler(endpoint, response);
   } else {
     response.writeHead(404);

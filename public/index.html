@@ -5,23 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/main.css">
-    <title>Document</title>
+    <title>IMDB</title>
   </head>
   <body>
-    <img src="/public/background.jpg" alt="" class="background" />
     <header>
+      <img class="title-img" src="/public/IMDB-MR_free-file.png" alt="title">
+    </header>
+    <div class="description">
+      <h1>This website for searching for your best movie from thousends of movies</h1>
+    </div>
+    <div class="search-area">
+
       <input list="film" type="search" id="searsh" placeholder="searsh" />
       <datalist id="film">
       </datalist>
       
       <button>searsh</button>
-    </header>
+    </div>
     <main>
       <div class="card">
 
       </div>
     </main>
-    <script src="../scr/api.js"></script>
+    <script src="/public/api.js"></script>
     <script src="/public/dom.js"></script>
   </body>
 </html>
