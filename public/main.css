@@ -4,61 +4,75 @@ body {
 .background {
   width: 100%;
   position: fixed;
+  display: none;
   height: 110vh;
   z-index: -1;
   filter: brightness(0.75) contrast(1.2);
 }
+
 header {
+  height: 5rem;
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+}
+.description {
+  width: 100%;
+  text-align: center;
+}
+h1 {
+  margin-top: 7rem;
+}
+.title-img {
+  height: 4rem;
+}
+.search-area {
   width: 80%;
   margin: auto;
-  padding: 7.2rem 3.4rem 2.4rem 0;
   display: flex;
-  margin-left: 10.2rem;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 button {
-  display: flex;
-  padding: 1.2rem 2.4rem;
+  height: 3.5rem;
   border: none;
-  background-color: rgb(255, 50, 50);
-  text-decoration: none;
+  background-color: black;
+  justify-content: center;
   width: 8.2rem;
   color: white;
   font-weight: 600;
+  display: flex;
+  align-items: center;
   border-radius: 10px;
-  margin-top: 1rem;
+  margin-left: 1rem;
 }
 input {
-  border: 2px solid rgb(255, 50, 50);
+  border: 2px solid gray;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   font-weight: 600;
   padding: 1.2rem 2.4rem;
   transition: all 0.3s ease;
-  width: 25.2rem;
+  width: 31.2rem;
 }
 .card {
   display: flex;
   justify-content: center;
-  width: 87%;
+  width: 100%;
   flex-direction: column;
   align-items: center;
-  border-radius: 25px;
-  padding: 1.2rem 1.4rem;
-  margin-left: 5.5rem;
+  margin-top: 3rem;
 }
 .card img {
   width: 20rem;
   height: 20rem;
-  border-radius: 10px;
   object-fit: contain;
   border-radius: 10px;
 }
 .card h2 {
   font-size: 35px;
   font-weight: 600;
-  color: white;
+  color: black;
   padding: 0rem 1.4rem 1.2rem;
 }
